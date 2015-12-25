@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="copying fxmls"/>
+  <copy file="src/main/java/application/App.fxml" tofile="target/classes/application/App.fxml"/>
+</target>
+</project>

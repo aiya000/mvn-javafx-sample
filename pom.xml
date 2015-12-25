@@ -29,12 +29,22 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
-                <configuration>
-                    <target>
-                        <echo message="copy files"/>
-                        <copy file="src/main/java/application/App.fxml" tofile="target/classes/application/App.fxml"/>
-                    </target>
-                </configuration>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <configuration>
+                            <target>
+                                <echo message="copying fxmls"/>
+                                <copy file="src/main/java/application/App.fxml" tofile="target/classes/application/App.fxml"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
